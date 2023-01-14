@@ -15,35 +15,28 @@ def main():
     f1 = []
     t1 = []
 
-    t2 = []
-    f2 = []
-
     f3 = []
     t3 = []
 
     with open(argv[1], newline="") as csvfile:
-        spamreader = csv.reader(csvfile, delimiter=';')
-        for row in spamreader:
+        reader = csv.reader(csvfile, delimiter=';')
+        for row in reader:
             query = get_name(row[0])
-            if query[0].startswith("F1") or query[0].startswith("F2") or query[0].startswith("BAR"):
+            if query[0].startswith("F1") or query[0].startswith("BAR"):
                 data = (int(query[1]) / 60000, float(query[0].split(":")[1]))
                 if query[0].startswith("F1"):
                     f1.append(data[1])
                     t1.append(data[0])
-                elif query[0].startswith("F2"):
-                    f2.append(data[1])
-                    t2.append(data[0])
                 elif query[0].startswith("BAR"):
                     f3.append(data[1])
                     t3.append(data[0])
 
     print("Arrays created. Displaying Plot...")
 
-    plt.title("Außen(Blau DHT22)- und Innentemperatur(Rot DHT22, Grün BMP180)")
+    plt.title("Außen(Blau DHT22)- und Innentemperatur(Rot BMP180)")
     plt.xlabel("Zeit in Minuten")
     plt.ylabel("Temperatur in °C")
     plt.plot(t1, f1,
-             t2, f2,
              t3, f3)
 
     plt.show()
