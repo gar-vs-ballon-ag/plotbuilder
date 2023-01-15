@@ -35,7 +35,7 @@ def main():
     plt.ylabel("Temperatur in °C")
 
     plt.plot(t1, f1, label="Außentemperatur (DHT22)")
-    plt.plot(t3, f3, label="Innentemperatur (BMP085)")
+    plt.plot(t3, f3, label="Innentemperatur (BMP180)")
 
     plt.legend(loc="upper right")
     plt.grid()

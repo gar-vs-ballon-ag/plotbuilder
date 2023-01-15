@@ -36,13 +36,13 @@ def main():
 
     print("Arrays created. Displaying Plot...")
 
-    plt.title("Außen- und Innentemperatur, Vergleich von DHT22 und BMP085")
+    plt.title("Außen- und Innentemperatur, Vergleich von DHT22 und BMP180")
     plt.xlabel("Zeit in Minuten")
     plt.ylabel("Temperatur in °C")
 
     plt.plot(t1, f1, label="Außen DHT22")
     plt.plot(t2, f2, label="Innen DHT22")
-    plt.plot(t3, f3, label="Innen BMP085")
+    plt.plot(t3, f3, label="Innen BMP180")
 
     plt.legend(loc="upper right")
     plt.grid()
