@@ -7,6 +7,7 @@ from Utils import get_name_time
 def main():
     if len(argv) < 1:
         print("Please put the filename as parameter.")
+        exit(1)
 
     f1 = []
     t1 = []
