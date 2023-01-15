@@ -38,6 +38,7 @@ def main():
     plt.plot(t3, f3, label="Innen (DHT22)")
 
     plt.legend(loc="upper right")
+    plt.grid()
     plt.show()
 
 

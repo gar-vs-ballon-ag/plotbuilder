@@ -38,6 +38,7 @@ def main():
     plt.plot(t3, f3, label="Innentemperatur (BMP085)")
 
     plt.legend(loc="upper right")
+    plt.grid()
     plt.show()
 
 

@@ -31,6 +31,7 @@ def main():
     plt.plot(t1, f1, label="Druck (BMP085)")
 
     plt.legend(loc="upper right")
+    plt.grid()
     plt.show()
 
 

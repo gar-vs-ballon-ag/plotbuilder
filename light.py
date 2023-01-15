@@ -52,6 +52,7 @@ def main():
     plt.plot(tg, fg, label="Licht Gesamt")
 
     plt.legend(loc="upper center")
+    plt.grid()
     plt.show()
 
 
