@@ -43,7 +43,7 @@ def main():
 
     plt.title("Lichteinfall")
     plt.xlabel("Zeit in Minuten")
-    plt.ylabel("Lichteinfall (0 bis 4048)")
+    plt.ylabel("Lichteinfall (0 bis 4048, Spannungsabfall am Widerstand)")
 
     plt.plot(tb, fb, label="Blaues Licht")
     plt.plot(tr, fr, label="Rotes Licht")
