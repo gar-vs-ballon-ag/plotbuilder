@@ -1,11 +1,7 @@
 import csv
 from sys import argv
 import matplotlib.pyplot as plt
-
-def get_name(s):
-    for i in s:
-        if not i.isnumeric():
-            return s[s.find(i):], s[:s.find(i)]
+from Utils import get_name_time
 
 
 def main():
@@ -21,7 +17,7 @@ def main():
     with open(argv[1], newline="") as csvfile:
         reader = csv.reader(csvfile, delimiter=';')
         for row in reader:
-            query = get_name(row[0])
+            query = get_name_time(row[0])
             if query[0].startswith("F1") or query[0].startswith("BAR"):
                 data = (int(query[1]) / 60000, float(query[0].split(":")[1]))
                 if query[0].startswith("F1"):
@@ -36,11 +32,12 @@ def main():
     plt.title("Außen(Blau DHT22)- und Innentemperatur(Rot BMP180)")
     plt.xlabel("Zeit in Minuten")
     plt.ylabel("Temperatur in °C")
-    plt.plot(t1, f1,
-             t3, f3)
 
+    plt.plot(t1, f1, label="Außentemperatur (DHT22)")
+    plt.plot(t3, f3, label="Innentemperatur (BMP085)")
+
+    plt.legend(loc="upper right")
     plt.show()
-
 
 
 if __name__ == "__main__":
