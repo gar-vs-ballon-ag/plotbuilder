@@ -50,7 +50,7 @@ def main():
     plt.plot(tg, fg, label="Grünes Licht")
     plt.plot(tg, fg, label="Licht Gesamt")
 
-    plt.legend(loc="upper right")
+    plt.legend(loc="upper center")
     plt.show()
 
 
