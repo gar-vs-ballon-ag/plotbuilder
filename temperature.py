@@ -29,7 +29,7 @@ def main():
 
     print("Arrays created. Displaying Plot...")
 
-    plt.title("Außen(Blau DHT22)- und Innentemperatur(Rot BMP180)")
+    plt.title("Außen- und Innentemperatur")
     plt.xlabel("Zeit in Minuten")
     plt.ylabel("Temperatur in °C")
 

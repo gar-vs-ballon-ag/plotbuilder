@@ -35,7 +35,7 @@ def main():
 
     print("Arrays created. Displaying Plot...")
 
-    plt.title("Außen- und Innentemperatur")
+    plt.title("Außen- und Innentemperatur, Vergleich von DHT22 und BMP085")
     plt.xlabel("Zeit in Minuten")
     plt.ylabel("Temperatur in °C")
 
@@ -45,7 +45,6 @@ def main():
 
     plt.legend(loc="upper right")
     plt.show()
-
 
 
 if __name__ == "__main__":
