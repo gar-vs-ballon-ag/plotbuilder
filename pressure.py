@@ -26,11 +26,10 @@ def main():
 
     plt.title("Luftdruck")
     plt.xlabel("Zeit in Minuten")
-    plt.ylabel("Druck in Bar")
+    plt.ylabel("Druck in mbar")
 
-    plt.plot(t1, f1, label="Druck (BMP085)")
+    plt.plot(t1, f1, label="Druck (BMP180)")
 
-    plt.legend(loc="upper right")
     plt.grid()
     plt.show()
 
